@@ -21,11 +21,9 @@ def affiche_carte(qty):
 
 
 def calcule_total(carte):
+    """Calcule le total des cartes"""
     if sum(carte) == 21 and len(carte) == 2:
         return 0
-    if 11 in carte and sum(carte) > 21:
-        carte.remove(11)
-        carte.append(1)
     return sum(carte)
 
 
